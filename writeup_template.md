@@ -22,16 +22,19 @@ The goals / steps of this project are the following:
 [image5]: ./examples/bboxes_and_heat.png
 [image6]: ./examples/labels_map.png
 [image7]: ./examples/output_bboxes.png
+
+
+[image21]: ./output_images/test1.jpg
+[image22]: ./output_images/test2.jpg
+[image23]: ./output_images/test3.jpg
+[image24]: ./output_images/test4.jpg
+[image25]: ./output_images/test5.jpg
+[image26]: ./output_images/test6.jpg
 [video1]: ./project_video.mp4
 
-## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
-###Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
-
----
 ###Writeup / README
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  [Here](https://github.com/udacity/CarND-Vehicle-Detection/blob/master/writeup_template.md) is a template writeup for this project you can use as a guide and a starting point.  
-
+####1. Provide a Writeup / README
 You're reading it!
 
 ###Histogram of Oriented Gradients (HOG)
@@ -84,18 +87,13 @@ Here's a [link to my video result](./project_video.mp4)
 
 I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  
 
-Here's an example result showing the heatmap from a series of frames of video, the result of `scipy.ndimage.measurements.label()` and the bounding boxes then overlaid on the last frame of video:
-
-### Here are six frames and their corresponding heatmaps:
-
-![alt text][image5]
-
-### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from all six frames:
-![alt text][image6]
-
-### Here the resulting bounding boxes are drawn onto the last frame in the series:
-![alt text][image7]
-
+### Here's an example result the bounding boxed from 6 example images:
+![alt text][image21]
+![alt text][image22]
+![alt text][image23]
+![alt text][image24]
+![alt text][image25]
+![alt text][image26]
 
 
 ---
