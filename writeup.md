@@ -63,7 +63,7 @@ I tried various combinations of parameters and the following were chosen as the 
 
 Besides HOG features, spatial binning is performed to extract features. The function bin_spatial at cell 2 is used to first resize the image to smaller dimensions using the openCV function resize and then return a single dimensional feature vector from this array using the ravel function.
 
-Another method used to extract features is the color histogram technique. The method color_hist in cell 2  is used to extract color histogram features and return it as a single feature vector using the np.concatenate method.
+Another method used to extract features is the color histogram technique. The method color_hist in cell 2 is used to extract color histogram features and return it as a single feature vector using the np.concatenate method.
 
 ####3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
@@ -83,11 +83,9 @@ I trained a linear SVM using
 
 ####1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
 
-* In the function draw_image in cell 26, a sliding window approach has been employed by using windows of different scales. The scales selected were (32,32),(64,64) and (96,96). The two scaled selected were (96, 96) and (120, 120). These particular sizes were chosen as they allowed the detection of smaller as well as larger cars in the image but also did not adversely affect performance. The overlapping chosen was 0.5.
+* In the function draw_image in cell 26, a sliding window approach has been employed by using windows of different scales. The scales selected were (64,64) and (96,96). These particular sizes were chosen as they allowed the detection of smaller as well as larger cars in the image but also did not adversely affect performance. The overlapping chosen was 0.6.
 
 * The function add_heat in cell 21 is used to add values to a heatmap (used for detecting vehicle boxes).
-
-* The function apply_threshold in cell 22 is used to apply a threshold to the above heatmap so that only regions which are sufficiently "hot" in the heatmap get detected as vehicles.
 
 ####2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
